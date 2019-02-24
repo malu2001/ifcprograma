@@ -69,7 +69,7 @@ class Mato(Planta):
             crescimento2 = altura2 + crescimento1
             print("Sua plantinha não cresce mais. Sua altura", crescimento2, "cm", 'em metros: ', crescimento2/100)
 
-
+#valores estipulados  para plata e mato
 if __name__ == "__main__":
     planta = Planta('maria', 1, 1.5,'margarida', 5)
     mato = Mato('capim', 1, 0.5, 'mato ué', 61, 12)
