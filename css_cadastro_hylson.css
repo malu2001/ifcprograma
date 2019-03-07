@@ -1,0 +1,50 @@
+body{
+
+	background-image: url("sangue.png");
+}
+
+
+#area {
+
+	background-color: white;
+	position: relative;
+	left: 450px;
+	top: 30px;
+	width: 450px;
+	height: 270px;
+}
+
+#area #formulario{
+
+	background-color: white;
+	display: block;
+	left: 400px;
+}
+
+fieldset{
+
+	background-color: white;
+	width:400px;
+	height: 630px;
+
+}
+
+#formulario label.{
+
+	left: 40px;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+
+#formulario legend{
+
+	font-style:bold;
+}
+
+
+
+
+
+
+
+
