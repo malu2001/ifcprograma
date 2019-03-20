@@ -1,0 +1,21 @@
+{%import lista_pessoas%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cadastrinho safadinho e egocentrizinho</title>
+</head>
+
+<body>
+
+    <h2>Listinha de pessoinhas</h2>
+
+{%for i in usuarios:%}
+    {{i.nome}} <br>
+
+{%endfor%}
+
+
+</body>
+</html>
