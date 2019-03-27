@@ -2,13 +2,15 @@
 <html>
 
 <head>
-    <title>Cadastrinho safadinho e egocentrizinho</title>
+    <title>Cadastrinho</title>
 </head>
 
 <body>
     <h1>DADOS EXIBIDOS</h1>
-    {% for i in usuario: %}
-        {{i}}<br>
+    {% for i in usuarios: %}
+        {{i.nome + "; "}} 
+        {{i.endereco + "; "}} 
+        {{i.cpf + "; "}}<br>
     {% endfor %}
    
 

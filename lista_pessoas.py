@@ -1,21 +1,29 @@
 from flask import Flask, render_template, request 
 from classe_flask import Pessoa
 
+lista_global= []
+
+class Pessoa():
+    def __init__(self, nome, endereco, cpf):
+        self.nome = nome
+        self.endereco = endereco
+        self. cpf = cpf
+
+
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    lista  = [Pessoa("Ana", "rua 08", "54654185418"),
-        Pessoa("Amanda", "rua 09", "54654185555"),
-        Pessoa("Maria", "rua 78", "5465418999999")]
-    return render_template("cadastro.html", usuarios = lista)
+    return render_template("cadastro.html", usuarios = lista_global)
 
-@app.route("/adicionar_pessoa")
+@app.route("/cadastro")
 def adicionar_pessoa():
     nome=request.args.get("nome")
     endereco=request.args.get("endereco")
-    lista =[nome, endereco]
-    return render_template ("exibir_mensagem.html", usuario = lista)
+    cpf = request.args.get("cpf")
+    pessoa = Pessoa(nome, endereco,cpf)
+    lista_global.append(pessoa)
+    return render_template ("exibir_mensagem.html", usuarios = lista_global)
     
 app.run()
 
