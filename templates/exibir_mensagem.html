@@ -7,8 +7,8 @@
 
 <body>
     <h1>DADOS EXIBIDOS</h1>
-    {% for i in usuarios: %}
-        {{i.nome + "; "}} 
+    {% for i in usuarios: %} 
+        {{i.nome + "; "}} <a href=/excluir_pessoa?nome={{i.nome}}>Excluir</a>
         {{i.endereco + "; "}} 
         {{i.cpf + "; "}}<br>
     {% endfor %}

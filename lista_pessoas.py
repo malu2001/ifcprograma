@@ -24,8 +24,30 @@ def adicionar_pessoa():
     pessoa = Pessoa(nome, endereco,cpf)
     lista_global.append(pessoa)
     return render_template ("exibir_mensagem.html", usuarios = lista_global)
+
+
+@app.route("/excluir_pessoa")
+def excluir_pessoa():
+    nome=request.args.get("nome")
+    ponteiro=None
+    for i in lista_global:
+        if i.nome==nome:
+            ponteiro=i
+            break 
+    if ponteiro is not None: 
+        lista_global.remove(ponteiro)
+        return render_template("exibir_mensagem.html", usuarios = lista_global)
+        
     
 app.run()
 
 
 
+  
+""" 
+nome=request.args.get("nome")
+    for i in lista_global:
+        if i.nome==nome:
+            lista_global.remove(i)
+            return render_template ("exibir_mensagem.html", usuarios=lista_global)
+"""
