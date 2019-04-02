@@ -1,0 +1,18 @@
+<!
+
+
+
+
+
+
+
+
+<formaction=mostrar selecao> 
+Selecione quais estados do Brasil vocˆe gostaria de visitar <br> 
+<br> <select name=”estado”multiple> <optionvalue=”AC”>Acre</option>
+3
+<optionvalue=”AL”>Alagoas</option>
+ <optionvalue=”AM”>Amazonas</option> 
+  <optionvalue=”SE”>Sergipe</option> <optionvalue=”SP”>S˜aoPaulo</option> 
+  <optionvalue=”TO”>Tocantins</option>
+   </select> <buttontype=”submit”>Enviar</button> </form>
