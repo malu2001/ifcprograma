@@ -12,13 +12,14 @@
 {% for i in usuarios: %}
     {{i.nome}} <br>
     {{i.endereco}} <br>
-    {{i.cpf}} <br>
+    {{i.telefone}} <br>
 {% endfor %}
 
 <form action="/cadastro">
-Nome: <input type="text" name="nome">
+Nome: <input type="text" name="nome"> <a href="/form_editar_pessoa?nome={{i.nome}}">Editar</a>
 Endereço: <textarea name="endereco"> </textarea>
-CPF: <input type="text" name="cpf">
+Telefone: <input type="text" name="telefone">
+
 <input type="submit" value= "Salvar">
 </form>
 <br>

@@ -7,4 +7,4 @@ app = Flask(__name__)
 def exibir():
 	return render_template("cadastro_hylson.html")
 
-app.run()
+app.run()      
