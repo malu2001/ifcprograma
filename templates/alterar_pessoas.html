@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Alterar Pessoas</title></head>
+    <body>
+
+    <form action = "/alterar_pessoas">
+
+        <h3>Alterar pessoa: </h3>
+        
+        Nome: <input type = "text" name = nome value = "{{pessoa.nome}}">
+        Cpf : <input type = "text" name = cpf value="{{pessoa.cpf}}">
+        
+        <input type = "submit" value = "Alterar">
+        <input type = hidden name = nome_original value= "{{pessoa.nome}}">
+       
+    </form>
+</body>
+</html>

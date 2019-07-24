@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Listar Pessoas</title></head>
+
+<h3> Listas de Pessoas: </h3>
+
+    <br>
+
+        {%for p in usuario:%}
+            {{p.nome}} | {{p.cpf}} |  <form action = "/excluir_pessoas">
+                <input type = "submit" value = "Exluir">
+                <input type = hidden name = "nome" value = "{{p.nome}}">
+            </form> | 
+            
+            <a href = "/form_alterar_pessoas?nome={{p.nome}}">Editar</a> |
+            <a href = "/form_login">Login</a><br>
+            
+            {%endfor%}
+
+    </form>
+    </body>
+</html>

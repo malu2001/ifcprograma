@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+    <head><title>Exibir dados</title></head>
+    <body>
+
+        <h1>Dados das comidas: </h1>
+
+    
+        {% for i in lista_comidas: %}
+            {{i.nome}}  | 
+            {{i.categoria}} |
+            {{i.vencimento}} <form action="/excluir_comida", method="POST"><a href = "/excluir_comida?nome={{i.nome}}">Excluir comida</a><br>
+        {%endfor%}
+
+
+    </body>
+</html>

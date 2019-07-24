@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cadastrinho safadinho e egocentrizinho</title>
+</head>
+
+<body>
+
+    <h2>Listinha de manitos</h2>
+
+{% for i in usuarios: %}
+    {{i.nome}} <br>
+    {{i.endereco}} <br>
+    {{i.cpf}} <br>
+{% endfor %}
+
+<form action="/cadastro">
+Nome: <input type="text" name="nome">
+Endereço: <textarea name="endereco"> </textarea>
+CPF: <input type="text" name="cpf">
+<input type="submit" value= "Salvar">
+</form>
+<br>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

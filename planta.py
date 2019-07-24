@@ -8,7 +8,7 @@ class Planta(object):
         self.tipo = tipo
         
        
-    def   (self, novo_nome):
+    def trocar_nome(self, novo_nome):
         if self.nome != novo_nome:
             self.nome = novo_nome
             print('Nome modificado:', self.nome)

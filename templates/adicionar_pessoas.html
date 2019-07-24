@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Adicionar Pessoas</title></head>
+    <body>
+
+        <h1>CADASTRE-SE: </h1>
+
+        <form action="/adicionar_pessoa", method="POST">
+
+            NOME : <input type = "text" name="nome" size="30">
+            CPF  : <input type="text" name="cpf" size="30">
+
+            {%for p in usuarios:%}
+                {{p.nome}} | {{p.cpf}} | 
+                
+            {%endfor%}
+
+            <button>Enviar</button> 
+        </form>
+</body>
+</html>
+
