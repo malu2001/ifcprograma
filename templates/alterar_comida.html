@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Alterar Comida</title>
+    </head>
+    <body>
+        <form action="/alterar_comida", method="POST">
+            Nome        <input type = "text", name = "nome", value = "{{comida.nome}}"> <br>
+            Categoria   <input type = "text", name = "categoria", value = "{{comida.categoria}}"> <br>
+            Vencimento  <input type = "text", name = "vencimento", value = "{{comida.vencimento}}"> <br>
+    
+            <input type = "submit", value = "Alterar">
+            <input type = "hidden" name = id value="{{comida.id}}">
+
+        </form>
+    </body>
+</html>

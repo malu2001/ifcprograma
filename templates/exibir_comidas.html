@@ -10,7 +10,8 @@
         {% for i in lista_comidas: %}
             {{i.nome}}  | 
             {{i.categoria}} |
-            {{i.vencimento}} <form action="/excluir_comida", method="POST"><a href = "/excluir_comida?nome={{i.nome}}">Excluir comida</a><br>
+            {{i.vencimento}} <form action="/excluir_comida"><a href = "/excluir_comida?id={{i.id}}">Excluir</a><br> | 
+                             <form action="/form_alterar_comida"><a href="/form_alterar_comida?id={{i.id}}">Alterar</a></form> <hr>
         {%endfor%}
 
 
