@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Inserir Receita</title>
+    </head>
+        <body>
+                <a href=/listar_receitas>Voltar</a>
+        
+                <h2>Receita: {{receita.titulo}}</h2>
+                Ingredientes: <br>
+        
+                <!-- percorre os ingredientes da receita -->
+                {% for i in ings %}
+
+                   <!-- exibe o nome do ingrediente -->
+                   * {{ i.ingrediente.nome_ingrediente }} 
+
+                   <!-- exibe a quantidade do ingrediente na receita -->
+                   {{i.qtd}}<br>            
+                {% endfor %} 
+            
+            </form>
+        </body>
+    </html>

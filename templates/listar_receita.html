@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Index</title>
+    </head>
+        <body>
+            <h3>Lista de Receitas</h3>
+    
+            {% for i in lista_receitas %}
+                {{ i.titulo }} 
+                <a href="/listar_ingredientes_da_receita?receita_id={{i.id}}"> Ingredientes...</a>
+            {% endfor %} 
+
+            <hr>
+
+        </body>
+</html>        
+                
