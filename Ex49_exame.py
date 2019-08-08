@@ -8,7 +8,7 @@ class BaseModelo(Model):
     class Meta:
         database = db
 
-class Paciente(BaseModelo):
+class Paciente(BaseModelo): # Nao precisaria desta classe, mas a titulo de entendimento esta foi colocada.
     nome_paciente = CharField()
 
 class Exame(BaseModelo):
