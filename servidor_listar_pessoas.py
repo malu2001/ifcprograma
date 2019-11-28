@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request, redirect, url_for
+from flask import Flask, render_template, session, request, redirect, url_for, json, jsonify
 
 app = Flask(__name__)
 
@@ -60,16 +60,25 @@ def alterar_pessoas():
 
 @app.route("/form_login")
 def form_login():
-    return render_template("login.html")
+    return render_template("exemplo1.html")
 
-@app.route("/login", methods = ['POST'])
+@app.route("/login", methods=['get'])
 def login():
-    login = request.form["login"]
-    senha = request.form["senha"]
-    if login == "maria" and senha == "123":
-        session["usuario"] = login
-        return redirect("/")
-    return "Login e/ou senha incorretos!"
+    login = request.args.get("login")
+    senha = request.args.get("senha")
+    
+    if login == "administrador" and senha == "587":
+        response = jsonify({'message': 'ok'})
+    
+    else:
+        response = jsonify({'message': 'error'})
+        #return "Houve algum erro durante o seu login!"
+        
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    
+    return response
+
+
 
 @app.route("/logout")
 def logout():
