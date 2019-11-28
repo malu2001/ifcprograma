@@ -28,6 +28,3 @@ jardim = Jardim.create(nome = "Jardim Ipiranga")
 
 jardim.plantas.__add__(rosa)
 
-print(jardim.plantas.nome_planta)
-print(jardim.nome_cientifico)
-print(jardim.tam_folha)
