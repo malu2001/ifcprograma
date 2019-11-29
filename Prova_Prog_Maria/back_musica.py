@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def inicio():
-    return "Esse é o backend"
+    return "<a href=/listar_elementos>Clique aqui</a>"
     
 @app.route("/listar_elementos")
 def listar_elementos():

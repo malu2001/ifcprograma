@@ -1,6 +1,7 @@
 from peewee import *
 
-arq = "C:/Users/pc/Documents/Programacao/loja_musica7.db"
+#arq = "C:/Users/pc/Documents/Programacao/loja_musica7.db"
+arq = "loja_musica7.db"
 db = SqliteDatabase(arq)
 
 class BaseModelo (Model):
@@ -53,7 +54,7 @@ class Fornecedor (BaseModelo):
 class Estoque (BaseModelo):
     produtos = ForeignKeyField (Produto)
     fornecedor = ForeignKeyField (Fornecedor)
-    data_nota_fiscal = CharField () # DateField()
+    data_nota_fiscal = CharField ()
     qtd = IntegerField ()
     
 db.connect()
@@ -91,7 +92,7 @@ if __name__ == "__main__":
     pag3 = Pagamento.create (tipo_pagamento = "A vista", forma_pagamento = "dinheiro", venda = venda3)
 
     forne1 = Fornecedor.create (nome  = "Jose LTDA", produto = prod2)
-    estoq1 = Estoque.create(produtos = prod3, fornecedor = forne1, data_nota_fiscal = "23/11/2019", qtd = 100)
+    estoq1 = Estoque.create(produtos = prod3, fornecedor = forne1, data_nota_fiscal = "29/11/2019", qtd = 100)
 
 
     #Testes para ver se houve a criação dos objetos.
